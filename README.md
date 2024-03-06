@@ -1,1 +1,1 @@
-xirvins svelte template with updated dependencies and some other things i like
+Work in progress, simple admin menu

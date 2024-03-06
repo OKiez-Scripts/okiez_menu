@@ -1,26 +1,31 @@
 fx_version 'cerulean'
-
 game "gta5"
+lua54 'yes'
 
 author "OK1ez"
 version '1.0.0'
 
-lua54 'yes'
-
-
-ui_page 'html/index.html'
--- ui_page 'http://localhost:3000/' --for dev
-
 client_script {
+  "config/actions.lua",
   'client/**',
 }
+
 server_script {
-  "server/**",
-  }
+  "config/webhook.lua",
+  "server/**"
+}
+
 shared_script {
+  '@ox_lib/init.lua',
   "shared/**",
-  }
+}
 
 files {
   'html/**',
+  'locales/*.json'
 }
+
+-- ui_page 'html/index.html'
+ui_page 'http://localhost:5173/'
+
+ox_lib 'locale'

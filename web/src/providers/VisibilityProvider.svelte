@@ -47,7 +47,7 @@
 </script>
 
 {#if isVisible}
-	<main>
+	<main class="w-screen h-screen flex items-center justify-end">
 		<slot />
 	</main>
 	<!-- <BackdropFix /> -->
